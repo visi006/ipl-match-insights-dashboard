@@ -23,9 +23,6 @@ This project ingests two real-world CSV datasets (matches and ball-by-ball deliv
 cleans and processes the data with **Pandas & NumPy**, generates 10+ visualisations using
 **Matplotlib & Seaborn**, and exposes everything through a filterable **Streamlit** web dashboard.
 
-The project is designed to be **beginner-friendly**, well-commented, and ready to showcase
-in a Data Science internship portfolio.
-
 ---
 
 ## ✨ Features
@@ -65,9 +62,9 @@ ipl_dashboard/
 ├── app.py                  # 🚀 Main Streamlit dashboard
 ├── analysis.ipynb          # 📓 Jupyter EDA Notebook
 ├── requirements.txt        # 📦 Python dependencies
-├── README.md               # 📖 You are here
+├── README.md           
 │
-├── datasets/               # 📁 Place CSV files here
+├── datasets/               
 │   ├── matches.csv
 │   └── deliveries.csv
 │
@@ -168,39 +165,6 @@ jupyter notebook analysis.ipynb
 - [ ] Deploy on **Streamlit Cloud** for a public URL
 - [ ] Add **bowling economy rate** and bowling average metrics
 - [ ] Introduce a **"Fantasy XI" picker** based on top stats
-
----
-
-## 🧠 Interview Prep
-
-### "Explain your project"
-> "I built an end-to-end Data Science project on IPL cricket data.
-> I loaded and cleaned two large CSV datasets — one with match-level info and another
-> with ball-by-ball delivery data. Then I performed EDA to find insights like top scorers,
-> leading wicket takers, and which teams perform best. Finally, I built an interactive
-> Streamlit dashboard where users can filter by season, team, or player and see charts update live."
-
-### "What challenges did you face?"
-> "My biggest challenge was data cleaning — team names had changed over the years (like
-> 'Delhi Daredevils' becoming 'Delhi Capitals'), so I had to standardise them. I also had
-> to handle run-outs carefully when counting bowler wickets, since run-outs shouldn't be
-> credited to the bowler."
-
-### "What did you learn?"
-> "I learned how to write modular, reusable Python code by splitting data loading, analysis,
-> and visualisation into separate files. I also learned that insights don't always match
-> intuition — for example, winning the toss barely improves your chances of winning the match."
-
----
-
-## 📄 Resume Bullet Points
-
-- **Analysed 13 seasons of IPL cricket data** (76,000+ deliveries) using Pandas & NumPy to uncover team win rates, player strike rates, and toss-impact statistics
-- **Built 10+ interactive visualisations** (bar charts, line graphs, heatmaps, scatter plots) using Matplotlib & Seaborn to communicate data-driven insights clearly
-- **Developed a modular Streamlit dashboard** with sidebar filters for season, team, and player selection — enabling real-time, drill-down analysis of match and player performance
-- **Performed end-to-end data wrangling** including missing value imputation, deduplication, and team name standardisation across two relational CSV datasets of 900+ matches
-
----
 
 ## 👤 Author
 
