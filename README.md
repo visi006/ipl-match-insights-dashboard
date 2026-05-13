@@ -1,175 +1,216 @@
 # 🏏 IPL Match Insights & Player Performance Analytics Dashboard
 
-A Data Science and Analytics project built using Python, Pandas, Matplotlib, Seaborn, and Streamlit to analyze IPL match statistics, player performance, and season trends.
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/en/8/84/Indian_Premier_League_Official_Logo.svg" width="120" alt="IPL Logo"/>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10+-blue?style=flat-square&logo=python"/>
+  <img src="https://img.shields.io/badge/Streamlit-1.29-red?style=flat-square&logo=streamlit"/>
+  <img src="https://img.shields.io/badge/Pandas-2.1-green?style=flat-square&logo=pandas"/>
+  <img src="https://img.shields.io/badge/Status-Complete-brightgreen?style=flat-square"/>
+</p>
+
+An end-to-end **Data Science project** that analyses 13 years of IPL cricket data (2008–2020)
+to uncover team performances, top players, venue insights, and season-wise trends —
+all presented in an interactive **Streamlit dashboard**.
 
 ---
 
 ## 📌 Project Overview
 
-This project performs Exploratory Data Analysis (EDA) on IPL datasets to uncover valuable insights about:
+This project ingests two real-world CSV datasets (matches and ball-by-ball deliveries),
+cleans and processes the data with **Pandas & NumPy**, generates 10+ visualisations using
+**Matplotlib & Seaborn**, and exposes everything through a filterable **Streamlit** web dashboard.
 
-* Team performance
-* Player statistics
-* Toss impact
-* Venue trends
-* Match-winning patterns
-* Season-wise analysis
-
-The project also includes an interactive Streamlit dashboard for visualizing analytics in a user-friendly way.
+The project is designed to be **beginner-friendly**, well-commented, and ready to showcase
+in a Data Science internship portfolio.
 
 ---
 
-# 🚀 Features
+## ✨ Features
 
-## 📊 Team Analysis
-
-* Total matches won by each team
-* Win percentage analysis
-* Toss winner impact on match result
-* Season-wise team comparison
-
-## 🏏 Player Analysis
-
-* Top run scorers
-* Top wicket takers
-* Strike rate analysis
-* Orange cap & purple cap trends
-
-## 🏟 Venue Insights
-
-* Highest scoring venues
-* Most successful chasing grounds
-* Venue-wise match distribution
-
-## 📈 Visualizations
-
-* Bar charts
-* Pie charts
-* Line graphs
-* Heatmaps
-* Interactive dashboard filters
+| Category | Details |
+|---|---|
+| **Data Cleaning** | Missing value handling, deduplication, team name standardisation |
+| **EDA** | 10+ analytical insights across teams, players, seasons, and venues |
+| **Visualisations** | Bar charts, pie charts, line graphs, heatmaps, scatter plots |
+| **Dashboard** | Streamlit app with sidebar filters (season, team, player) |
+| **Player Spotlight** | Per-player batting stats and season-wise run trend |
+| **Orange / Purple Cap** | Season-wise top scorers and wicket takers |
+| **Head-to-Head** | Win/loss record between any two teams |
+| **Dismissal Heatmap** | Wicket types per bowling team |
 
 ---
 
-# 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Seaborn
-* Streamlit
-* Jupyter Notebook
+| Tool | Purpose |
+|---|---|
+| **Python 3.10+** | Core programming language |
+| **Pandas** | Data loading, cleaning, and analysis |
+| **NumPy** | Numerical operations |
+| **Matplotlib** | Base charting library |
+| **Seaborn** | Statistical visualisations |
+| **Streamlit** | Interactive web dashboard |
+| **Jupyter Notebook** | EDA exploration (`analysis.ipynb`) |
 
 ---
 
-# 📂 Project Structure
+## 📂 Project Structure
 
-```bash id="4o0d3m"
-IPL-Analytics/
+```
+ipl_dashboard/
 │
-├── datasets/
+├── app.py                  # 🚀 Main Streamlit dashboard
+├── analysis.ipynb          # 📓 Jupyter EDA Notebook
+├── requirements.txt        # 📦 Python dependencies
+├── README.md               # 📖 You are here
+│
+├── datasets/               # 📁 Place CSV files here
 │   ├── matches.csv
 │   └── deliveries.csv
 │
-├── screenshots/
+├── utils/                  # 🛠️ Helper modules
+│   ├── __init__.py
+│   ├── data_loader.py      # CSV loading & cleaning
+│   ├── analysis.py         # All EDA functions
+│   └── visualizations.py  # All chart functions
 │
-├── app.py
-├── analysis.ipynb
-├── utils/data_loader.py
-├── utils/visualizations.py
-├── requirements.txt
-└── README.md
+└── screenshots/            # 📸 Auto-saved chart images
 ```
 
 ---
 
-# 📥 Dataset
+## ⚙️ Installation Steps
 
-Dataset used:
-
-* IPL Matches Dataset
-* IPL Deliveries Dataset
-
-You can download from Kaggle:
-https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020
-
----
-
-# ⚙️ Installation
-
-## Clone Repository
-
-```bash id="h8yqzz"
-git clone https://github.com/your-username/IPL-Analytics.git
-cd IPL-Analytics
+### 1. Clone the repository
+```bash
+git clone https://github.com/YOUR_USERNAME/ipl-analytics-dashboard.git
+cd ipl-analytics-dashboard
 ```
 
-## Install Dependencies
+### 2. Create a virtual environment (recommended)
+```bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
 
-```bash id="0s17k2"
+# macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+```
+
+### 3. Install dependencies
+```bash
 pip install -r requirements.txt
 ```
 
+### 4. Download the dataset
+Go to Kaggle and download the **IPL Complete Dataset (2008–2020)**:
+👉 https://www.kaggle.com/datasets/patrickb1912/ipl-complete-dataset-20082020
+
+Place both files inside the `datasets/` folder:
+```
+datasets/
+├── matches.csv
+└── deliveries.csv
+```
+
 ---
 
-# ▶️ Run Project
+## ▶️ How to Run
 
-## Run Streamlit Dashboard
-
-```bash id="qg63f0"
+### Option A — Streamlit Dashboard (Recommended)
+```bash
 streamlit run app.py
 ```
+Then open your browser at **http://localhost:8501**
 
-## Run Jupyter Notebook
-
-```bash id="w5v16w"
-jupyter notebook
+### Option B — Jupyter Notebook (EDA Only)
+```bash
+jupyter notebook analysis.ipynb
 ```
 
 ---
 
-# 📊 Key Insights Generated
+## 📊 Key Insights Discovered
 
-* Teams winning toss and batting first had higher win percentages in specific seasons.
-* Certain venues consistently produced high-scoring matches.
-* Top players maintained significantly higher strike rates across seasons.
-* Team performance trends varied season-by-season based on venue and toss decisions.
-
----
-
-# 🧹 Data Cleaning Performed
-
-* Removed missing/null values
-* Standardized inconsistent team names
-* Removed duplicate records
-* Cleaned season-wise match data
+- **Mumbai Indians** have the highest win count across all IPL seasons
+- Toss advantage only converts to a match win ~51% of the time (barely above chance)
+- **Virat Kohli** holds the record for most career runs in IPL history
+- **SL Malinga** is the all-time leading wicket taker
+- Teams generally prefer to **field first** after winning the toss
+- Average match scores have increased over the seasons, reflecting more aggressive batting
 
 ---
 
-# 📈 Sample Visualizations
+## 📸 Screenshots
 
-The project includes:
+> Run the notebook to auto-generate charts in `screenshots/`
 
-* Team win comparison charts
-* Top batsman analysis
-* Venue heatmaps
-* Season trend graphs
-* Toss decision impact charts
-
-# 🔮 Future Improvements
-
-* Match winner prediction using Machine Learning
-* Player score prediction model
-* Power BI dashboard integration
-* SQL database integration
-* Deployment using Streamlit Cloud
+| Chart | Description |
+|---|---|
+| `01_matches_won.png` | Team win counts |
+| `02_toss_impact.png` | Toss vs match result |
+| `03_top_run_scorers.png` | Top 10 batsmen |
+| `04_top_wicket_takers.png` | Top 10 bowlers |
+| `05_season_trend.png` | Season-wise avg score |
+| `06_dismissal_heatmap.png` | Wicket type heatmap |
 
 ---
 
-# 👨‍💻 Author
+## 🚀 Future Improvements
 
-Vismay Pradeep
+- [ ] Add a **Prediction Model** (who will win the next match?) using scikit-learn
+- [ ] Integrate **live IPL data** via Cricbuzz / ESPNcricinfo API
+- [ ] Add **fielding statistics** (catches, run-outs)
+- [ ] Deploy on **Streamlit Cloud** for a public URL
+- [ ] Add **bowling economy rate** and bowling average metrics
+- [ ] Introduce a **"Fantasy XI" picker** based on top stats
 
-* LinkedIn: https://linkedin.com/in/vismay-pradeep
-* GitHub: https://github.com/visi006
+---
+
+## 🧠 Interview Prep
+
+### "Explain your project"
+> "I built an end-to-end Data Science project on IPL cricket data.
+> I loaded and cleaned two large CSV datasets — one with match-level info and another
+> with ball-by-ball delivery data. Then I performed EDA to find insights like top scorers,
+> leading wicket takers, and which teams perform best. Finally, I built an interactive
+> Streamlit dashboard where users can filter by season, team, or player and see charts update live."
+
+### "What challenges did you face?"
+> "My biggest challenge was data cleaning — team names had changed over the years (like
+> 'Delhi Daredevils' becoming 'Delhi Capitals'), so I had to standardise them. I also had
+> to handle run-outs carefully when counting bowler wickets, since run-outs shouldn't be
+> credited to the bowler."
+
+### "What did you learn?"
+> "I learned how to write modular, reusable Python code by splitting data loading, analysis,
+> and visualisation into separate files. I also learned that insights don't always match
+> intuition — for example, winning the toss barely improves your chances of winning the match."
+
+---
+
+## 📄 Resume Bullet Points
+
+- **Analysed 13 seasons of IPL cricket data** (76,000+ deliveries) using Pandas & NumPy to uncover team win rates, player strike rates, and toss-impact statistics
+- **Built 10+ interactive visualisations** (bar charts, line graphs, heatmaps, scatter plots) using Matplotlib & Seaborn to communicate data-driven insights clearly
+- **Developed a modular Streamlit dashboard** with sidebar filters for season, team, and player selection — enabling real-time, drill-down analysis of match and player performance
+- **Performed end-to-end data wrangling** including missing value imputation, deduplication, and team name standardisation across two relational CSV datasets of 900+ matches
+
+---
+
+## 👤 Author
+
+**Your Name**  
+📧 your.email@example.com  
+🔗 [LinkedIn](https://linkedin.com/in/your-profile)  
+🐙 [GitHub](https://github.com/your-username)
+
+---
+
+## 📜 License
+
+This project is open-source under the [MIT License](LICENSE).
