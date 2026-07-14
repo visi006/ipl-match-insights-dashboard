@@ -142,20 +142,7 @@ jupyter notebook analysis.ipynb
 
 ---
 
-## 📸 Screenshots
 
-> Run the notebook to auto-generate charts in `screenshots/`
-
-| Chart | Description |
-|---|---|
-| `01_matches_won.png` | Team win counts |
-| `02_toss_impact.png` | Toss vs match result |
-| `03_top_run_scorers.png` | Top 10 batsmen |
-| `04_top_wicket_takers.png` | Top 10 bowlers |
-| `05_season_trend.png` | Season-wise avg score |
-| `06_dismissal_heatmap.png` | Wicket type heatmap |
-
----
 
 ## 🚀 Future Improvements
 
@@ -168,10 +155,10 @@ jupyter notebook analysis.ipynb
 
 ## 👤 Author
 
-**Your Name**  
-📧 your.email@example.com  
-🔗 [LinkedIn](https://linkedin.com/in/your-profile)  
-🐙 [GitHub](https://github.com/your-username)
+**Vismay Pradeep**  
+📧 vis1913886@gmail.com  
+🔗 [LinkedIn](www.linkedin.com/in/vismay-pradeep) 
+🐙 [GitHub](https://github.com/visi006)
 
 ---
 
